@@ -3,6 +3,7 @@ package com.flimau.dslist.service;
 import com.flimau.dslist.dto.GameDTO;
 import com.flimau.dslist.dto.GameMinDTO;
 import com.flimau.dslist.entities.Game;
+import com.flimau.dslist.projections.GameMinProjection;
 import com.flimau.dslist.repository.GameRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,5 +38,11 @@ public class GameService{
     public GameDTO findById(Long id){
         Game result = repository.findById(id).get();
         return new GameDTO(result);
+    }
+
+    @Transactional(readOnly = true)
+    public List<GameMinDTO> findByList(long listId){
+        List<GameMinProjection> result = repository.searchByList(listId);
+        return result.stream().map(GameMinDTO::new).toList();
     }
 }

@@ -2,6 +2,7 @@ package com.flimau.dslist.service;
 
 
 import com.flimau.dslist.dto.GameListDTO;
+import com.flimau.dslist.dto.GameMinDTO;
 import com.flimau.dslist.entities.GameList;
 import com.flimau.dslist.repository.GameListRepository;
 import org.springframework.beans.factory.annotation.Autowired;
