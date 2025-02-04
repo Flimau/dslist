@@ -5,7 +5,7 @@ public interface GameMinProjection {
     // propriedade que a consulta retornar
     Long getId();
     String getTitle();
-    int getYear();
+    int getGameYear();
     String getImgUrl();
     String getShortDescription();
     int getPosition();
