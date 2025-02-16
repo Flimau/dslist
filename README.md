@@ -39,7 +39,8 @@ DSList é uma aplicação desenvolvida para gerenciar listas de jogos. O projeto
    ```bash
    ./mvnw spring-boot:run
 
-   ou
+ou
 
-      ```bash
+   ```bash
    mvn spring-boot:run
+
